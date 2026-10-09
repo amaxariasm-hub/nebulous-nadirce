@@ -1,0 +1,29 @@
+---
+const { nombre, descripcion, imagen } = Astro.props;
+---
+<article class="tarjeta">
+  <img src={imagen} alt={nombre} />
+  <h3>{nombre}</h3>
+  <p>{descripcion}</p>
+</article>
+
+<style>
+  .tarjeta {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 3px 10px #0002;
+    text-align: center;
+  }
+
+  .tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .tarjeta h3 {
+    color: #593b75;
+  }
+</style>

@@ -1,11 +1,46 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import TarjetaTaller from "../components/TarjetaTaller.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout titulo="Inicio | Espacio Cultural">
+  <section class="bienvenida">
+    <h2>Descubre tu creatividad</h2>
+    <p>
+      Bienvenidos a Espacio Cultural, un lugar para aprender,
+      compartir y desarrollar tus habilidades artísticas.
+    </p>
+  </section>
+
+  <section class="contenido">
+    <h2>Nuestros talleres destacados</h2>
+
+```
+<div class="tarjetas">
+  <TarjetaTaller
+    nombre="Fotografía"
+    descripcion="Aprende composición y fotografía digital."
+    imagen="/img/fotografia.jpg"
+  />
+
+  <TarjetaTaller
+    nombre="Cerámica"
+    descripcion="Crea objetos utilizando técnicas de modelado."
+    imagen="/img/ceramica.jpg"
+  />
+
+  <TarjetaTaller
+    nombre="Escritura creativa"
+    descripcion="Explora relatos y desarrolla tu imaginación."
+    imagen="/img/escritura.jpg"
+  />
+</div>
+
+<p>
+  <a href="/talleres">Conoce todos nuestros talleres</a>
+</p>
+```
+
+  </section>
 </Layout>
